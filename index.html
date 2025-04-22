@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Paper Title</title>
+  <title>Foundation-model-based Action selection for Behavior Trees in Navigation</title>
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -29,7 +29,7 @@
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
-      background: white;
+      background: f9f9f9;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
@@ -74,22 +74,40 @@
 </head>
 <body>
   <header>
-    <h1>Your Paper Title Here</h1>
+    <h1>Foundation-model-based Action selection for Behavior Trees in Navigation</h1>
     <p>Conference Name, Year</p>
   </header>
 
   <div class="container">
     <section class="authors">
       <h2>Authors</h2>
-      <p>Your Name<sup>1</sup>, Collaborator Name<sup>2</sup></p>
-      <p><sup>1</sup>Affiliation One &nbsp; <sup>2</sup>Affiliation Two</p>
+      <p>Michele Moriconi<sup>1</sup>, Collaborator Name<sup>2</sup></p>
+      <p><sup>1</sup>Università degli Studi di Genova &nbsp; <sup>2</sup>Affiliation Two</p>
     </section>
 
     <section class="abstract">
       <h2>Abstract</h2>
       <p>
-        Paste your abstract here. Make sure it's concise and clearly describes the core contributions of your paper.
+        Autonomous navigation in dynamic environments remains a central challenge in robotics, particularly within industrial settings populated by humans, vehicles, and 
+        other robots. Traditional navigation pipelines often lack semantic understanding, treating obstacles as simple geometric shapes and failing to adapt effectively to 
+        unforeseen scenarios. This work introduces a novel architecture that enhances robotic obstacle avoidance by integrating Foundation Models (FMs) with Behavior Trees 
+        (BTs), the standard decision-making framework in ROS2. The proposed pipeline features a Perception Module that extracts semantic information from RGB-D inputs using 
+        vision-language models, a Reasoning Module that interprets textual obstacle descriptions via large language models to select context-aware actions, and a BT-based 
+        execution system that orchestrates behavior accordingly. Experimental validation using a custom warehouse-like dataset and a range of prompting techniques 
+        demonstrates that the inclusion of FMs significantly improves semantic interpretation and decision-making capabilities. This research shows that semantic reasoning 
+        with small FMs that run locally can complement existing navigation systems, leading to more flexible, and more intelligent robot behavior, without compromising the 
+        safety and reliability of traditional methods.
       </p>
+    </section>
+
+    <section class="video">
+      <h2>Video</h2>
+      <video controls loop autoplay muted>
+        <source src="Media/media1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        <a href="Media/your-video.mp4" download>Download the video</a>
+      </video>
+      <p>Video: A brief description of the video content.</p>
     </section>
 
     <section class="links">
@@ -97,13 +115,12 @@
       <ul>
         <li><a href="link-to-paper.pdf" target="_blank">📄 Paper (PDF)</a></li>
         <li><a href="https://github.com/yourusername/yourproject" target="_blank">💻 Code</a></li>
-        <li><a href="link-to-presentation-or-video" target="_blank">🎥 Presentation / Demo Video</a></li>
       </ul>
     </section>
 
     <section class="figure">
       <h2>Overview</h2>
-      <img class="paper-img" src="your-image.png" alt="Overview figure or architecture diagram">
+      <img class="paper-img" src="Media/system_overview.jpg" alt="Overview figure or architecture diagram">
       <p>Figure: A brief caption of the main figure or architecture diagram.</p>
     </section>
 
