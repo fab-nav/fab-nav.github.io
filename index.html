@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foundation-model-based Action selection for Behavior Trees in Navigation</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
+      margin: 0;
+      padding: 0;
       background: #f9f9f9;
       color: #333;
-      box-sizing: border-box;
     }
 
     header {
       background: #2c3e50;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
@@ -28,16 +30,14 @@
     }
 
     .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      width: 100%;
+      max-width: 100%;
+      padding: 2rem 10%;
       background: #f9f9f9;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border-radius: 8px;
     }
 
     section {
-      padding: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     h2 {
@@ -61,26 +61,69 @@
 
     .paper-img {
       max-width: 100%;
+      height: auto;
       display: block;
       margin: 1rem auto;
       border: 1px solid #ccc;
+      border-radius: 6px;
     }
 
     video {
       width: 100%;
       height: auto;
-      display: block;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 6px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    .video-container video,
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .prompt-text {
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-top: 1rem;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #777;
-      padding: 1rem 0;
+      padding: 2rem 1rem;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 6px;
     }
   </style>
+  <script>
+    function showPrompt() {
+      const selected = document.getElementById("prompt-select").value;
+      document.getElementById("zs").style.display = selected === "zs" ? "block" : "none";
+      document.getElementById("icl").style.display = selected === "icl" ? "block" : "none";
+      document.getElementById("cot").style.display = selected === "cot" ? "block" : "none";
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -109,11 +152,29 @@
         safety and reliability of traditional methods.
       </p>
     </section>
-    
+
     <section class="figure">
       <h2>Overview</h2>
       <img class="paper-img" src="Media/system_overview.jpg" alt="Overview figure or architecture diagram">
       <p>Figure: A brief caption of the main figure or architecture diagram.</p>
+    </section>
+
+    <section class="prompts">
+      <h2>Prompts</h2>
+      <select id="prompt-select" onchange="showPrompt()" style="padding: 0.5rem 1rem; font-size: 1rem; border: 2px solid #2980b9; border-radius: 6px; background-color: #f9f9f9; color: #333; cursor: pointer; transition: all 0.3s ease;">
+        <option value="zs">Zero-shot</option>
+        <option value="icl">In-context Learning</option>
+        <option value="cot">Chain-of-Thought</option>
+      </select>
+      <div id="zs" class="prompt-text">
+        <p>This is the zero-shot prompt used in our application...</p>
+      </div>
+      <div id="icl" class="prompt-text" style="display: none;">
+        <p>This is the in-context learning prompt used in our application...</p>
+      </div>
+      <div id="cot" class="prompt-text" style="display: none;">
+        <p>This is the chain-of-thought prompt used in our application...</p>
+      </div>
     </section>
 
     <section class="video">
