@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foundation-model-based Action selection for Behavior Trees in Navigation</title>
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       background: #f9f9f9;
       color: #333;
+      box-sizing: border-box;
     }
 
     header {
@@ -29,7 +31,7 @@
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
-      background: f9f9f9;
+      background: #f9f9f9;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
@@ -62,6 +64,14 @@
       display: block;
       margin: 1rem auto;
       border: 1px solid #ccc;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 8px;
     }
 
     footer {
@@ -99,13 +109,19 @@
         safety and reliability of traditional methods.
       </p>
     </section>
+    
+    <section class="figure">
+      <h2>Overview</h2>
+      <img class="paper-img" src="Media/system_overview.jpg" alt="Overview figure or architecture diagram">
+      <p>Figure: A brief caption of the main figure or architecture diagram.</p>
+    </section>
 
     <section class="video">
       <h2>Video</h2>
       <video controls loop autoplay muted>
         <source src="Media/media1.mp4" type="video/mp4">
         Your browser does not support the video tag.
-        <a href="Media/your-video.mp4" download>Download the video</a>
+        <a href="Media/media1.mp4" download>Download the video</a>
       </video>
       <p>Video: A brief description of the video content.</p>
     </section>
@@ -116,12 +132,6 @@
         <li><a href="link-to-paper.pdf" target="_blank">📄 Paper (PDF)</a></li>
         <li><a href="https://github.com/yourusername/yourproject" target="_blank">💻 Code</a></li>
       </ul>
-    </section>
-
-    <section class="figure">
-      <h2>Overview</h2>
-      <img class="paper-img" src="Media/system_overview.jpg" alt="Overview figure or architecture diagram">
-      <p>Figure: A brief caption of the main figure or architecture diagram.</p>
     </section>
 
     <section class="bibtex">
