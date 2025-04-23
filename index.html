@@ -129,14 +129,14 @@
 <body>
   <header>
     <h1>Foundation-model-based Action selection for Behavior Trees in Navigation</h1>
-    <p>Conference Name, Year</p>
+    <p>Conference Name, 2025</p>
   </header>
 
   <div class="container">
     <section class="authors">
       <h2>Authors</h2>
-      <p>Michele Moriconi<sup>1</sup>, Collaborator Name<sup>2</sup></p>
-      <p><sup>1</sup>Università degli Studi di Genova &nbsp; <sup>2</sup>Affiliation Two</p>
+      <p>Michele Moriconi<sup>1</sup>, Stefan Laible<sup>2</sup>, Carmine Recchiuto<sup>1</sup></p>
+      <p><sup>1</sup>Università degli Studi di Genova &nbsp; <sup>2</sup>Bosch Research</p>
     </section>
 
     <section class="abstract">
@@ -334,14 +334,27 @@
         </i></p>
     </section>
 
+    <section class="behavior-tree">
+      <h2>Behavior Tree</h2>
+      This section provides a detailed view of the Behavior Tree (BT) used in our architecture. The BT is designed to manage the robot's actions based on the
+      detected obstacles and the selected actions. The BT is structured to ensure that the robot can adapt its behavior dynamically based on the environment and the
+      detected obstacles. The BT is implemented in ROS2 and is designed to be modular and extensible, allowing for easy integration of new behaviors and actions as needed.
+      <img class="paper-img" src="Media/full_tree.png" alt="Behavior Tree">
+      <p>Figure: The Behavior Tree of the proposed architecture.</p>
+
     <section class="video">
       <h2>Video</h2>
+      <p>
+        This video demonstrates the execution of the proposed pipeline, with one example for each of the five different actions. It is important to keep in mind that the 
+        models are running on an edge device and it communicates with the robot through ROS2. The communication between the robot and the edge device has not been 
+        optimized yet, so the latency is not representative of the final performance.
+      </p>
       <video controls loop autoplay muted>
         <source src="Media/media1.mp4" type="video/mp4">
         Your browser does not support the video tag.
         <a href="Media/media1.mp4" download>Download the video</a>
       </video>
-      <p>Video: A brief description of the video content.</p>
+      <p>Video: The executions of the proposed pipeline, showcasing the five different actions.</p>
     </section>
 
     <section class="links">
