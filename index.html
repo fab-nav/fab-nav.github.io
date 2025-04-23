@@ -164,8 +164,11 @@
       <h2>Prompts</h2>
       <p>
         In this section, we present the prompts used in our experiments. The prompts are designed to guide the Foundation Model in selecting the 
-        appropriate action for the robot based on the detected obstacles. The prompts are categorized into four types: Zero-shot, In-context Learning (ICL), 
-        Chain-of-Thought (CoT), and ICL + CoT. Select the prompt type from the dropdown menu to view the corresponding prompt.
+        appropriate action for the robot based on the detected obstacles. The prompts are structured using the Ollama modelfile format.
+        Specifically, SYSTEM identifies the system prompt that sets the context for the model, while MESSAGE user and MESSAGE assistant
+        represent the user and assistant messages, respectively, and are used to provide examples of the expected input and output. The 
+        prompts are categorized into four types: Zero-shot, In-context Learning (ICL), Chain-of-Thought (CoT), and ICL + CoT. Select the 
+        prompt type from the dropdown menu to view the corresponding prompt.
       </p>
       <select id="prompt-select" onchange="showPrompt()" style="padding: 0.5rem 1rem; font-size: 1rem; border: 2px solid #2980b9; border-radius: 6px; background-color: #f9f9f9; color: #333; cursor: pointer; transition: all 0.3s ease;">
         <option value="zs">Zero-shot</option>
